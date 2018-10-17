@@ -4,7 +4,9 @@ import './App.css';
 import Posts from './components/Posts';
 import Postform from './components/Postform';
 import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 
+const store = createStore( () => [ ], {}, applyMiddleware() );
 class App extends Component {
   render() {
     return (
