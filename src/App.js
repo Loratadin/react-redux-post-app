@@ -3,25 +3,20 @@ import logo from './logo.svg';
 import './App.css';
 import Posts from './components/Posts';
 import Postform from './components/Postform';
+import { Provider } from 'react-redux';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Postform/>
-          <Posts/>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <Provider store={store}>
+          <div className="App">
+            <header className="App-header">
+              <img src={logo} className="App-logo" alt="logo" />
+              <Postform/>
+              <Posts/>
         </header>
       </div>
+      </Provider>
     );
   }
 }
